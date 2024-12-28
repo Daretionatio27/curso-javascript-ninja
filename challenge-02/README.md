@@ -70,12 +70,12 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 function soma1(x, y, z){
-  if (y === undefined && z === undefined){
+  if (x !== undefined && y === undefined && z === undefined){
     return x
-  }else if(z === undefined){
+  }else if(x !== undefined && y !== undefined && z === undefined){
     return x + y
-  }else if(x === Number && y === Number && z === Number){
-    return x + y / z
+  }else if(x !== undefined && y !== undefined && z !== undefined){
+    return (x + y) / z
   }else if(x === undefined && y === undefined && z === undefined){
     return false
   }else {
